@@ -28,8 +28,8 @@ Open `index.html` in a modern browser. No build step or package installation is 
 4. Under build/deployment, select **Deploy from a branch**.
 5. Select branch `main` and folder `/ (root)`, then save.
 6. Wait for GitHub Pages to publish. Your address will look like:
-   `https://YOUR-GITHUB-USERNAME.github.io/easylife/`
-7. Replace `YOUR-GITHUB-USERNAME` in the canonical URL in `index.html`, and in `robots.txt` and `sitemap.xml`, with your actual GitHub username. Commit the changes.
+   `https://annafoster3774-hub.github.io/easylife/`
+7. Replace `annafoster3774-hub` in the canonical URL in `index.html`, and in `robots.txt` and `sitemap.xml`, with your actual GitHub username. Commit the changes.
 
 ## Important notes
 - This is a static website. It does not need a paid server or API.
