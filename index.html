@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f5ef">
+<meta name="description" content="Free everyday tools: budget calculator, savings planner, weekly meal planner, to-do list and home checklists. Available in English and Russian.">
+<meta name="keywords" content="free budget calculator, savings calculator, meal planner, to do list, home checklist, калькулятор бюджета, планировщик питания">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/easylife/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="EasyLife — Life, made easier">
+<meta property="og:description" content="Simple, free tools for budgeting, planning and everyday life.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>EasyLife — Life, made easier</title>
+<style>
+:root{--bg:#f6f5ef;--paper:#fffefa;--ink:#1f3028;--muted:#788078;--green:#315d48;--green2:#e7eee7;--line:#e8e8df;--gold:#d7b979;--shadow:0 18px 55px rgba(36,54,43,.07);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{max-width:1180px;margin:auto;padding:0 26px}
+header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:11px;font-weight:750;font-size:19px;letter-spacing:-.5px}.brand-mark{width:35px;height:35px;border-radius:12px;background:var(--green);color:white;display:grid;place-items:center;font-size:18px}
+.nav{display:flex;align-items:center;gap:26px;color:var(--muted);font-size:13px}.nav a{color:inherit;text-decoration:none}.nav a:hover{color:var(--green)}
+.lang{border:1px solid var(--line);border-radius:999px;background:var(--paper);padding:8px 13px;color:var(--ink);font-weight:650}
+.hero{padding:70px 0 48px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.eyebrow{color:var(--green);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:9px}.eyebrow:before{content:"";width:22px;height:1px;background:var(--gold)}
+h1{font-size:clamp(42px,6vw,68px);line-height:1.04;letter-spacing:-3px;margin:18px 0 20px;font-weight:650}.hero p{max-width:520px;color:var(--muted);font-size:17px;margin:0 0 27px}
+.primary{border:0;background:var(--green);color:white;padding:13px 20px;border-radius:999px;font-weight:700;box-shadow:0 8px 20px #315d4825}.primary:hover{background:#244a37;transform:translateY(-1px)}
+.hero-note{font-size:12px;color:var(--muted);margin-top:14px}.hero-art{background:linear-gradient(145deg,#e6ebe1,#dce5da);border-radius:32px;min-height:330px;position:relative;overflow:hidden;padding:26px;box-shadow:var(--shadow)}
+.art-sun{position:absolute;width:190px;height:190px;border-radius:50%;background:#e7d5a9;right:36px;top:30px;opacity:.85}.art-hill{position:absolute;bottom:-100px;width:115%;height:230px;border-radius:50% 50% 0 0;background:#8ea48d;left:-8%;transform:rotate(-8deg)}.art-hill.two{bottom:-135px;left:20%;background:#557760;transform:rotate(9deg)}
+.art-card{position:relative;z-index:2;background:#fffefaed;border:1px solid #ffffffaa;border-radius:18px;padding:17px;width:210px;box-shadow:0 14px 35px #263c2b20}.art-card small{color:var(--muted)}.art-card strong{display:block;font-size:26px;margin:5px 0}.progress{height:6px;background:#e8ece4;border-radius:10px;overflow:hidden}.progress i{display:block;width:72%;height:100%;background:var(--green);border-radius:10px}
+.section-head{display:flex;align-items:end;justify-content:space-between;margin:35px 0 20px}.section-head h2{font-size:27px;letter-spacing:-1px;margin:0}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}
+.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.tool-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-align:left;min-height:175px;transition:.2s;color:var(--ink)}.tool-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#cbd7cb}.tool-icon{width:42px;height:42px;border-radius:14px;background:var(--green2);display:grid;place-items:center;font-size:20px;margin-bottom:15px}.tool-card h3{margin:0 0 6px;font-size:16px}.tool-card p{margin:0;color:var(--muted);font-size:13px}
+.panel{margin:28px 0 60px;background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--shadow);scroll-margin-top:20px}.panel-top{display:flex;justify-content:space-between;align-items:start;gap:20px;margin-bottom:22px}.panel h2{margin:0;font-size:25px;letter-spacing:-.8px}.panel-top p{margin:5px 0 0;color:var(--muted);font-size:13px}.close{border:1px solid var(--line);background:white;border-radius:50%;width:34px;height:34px;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}.field label{font-size:12px;font-weight:700;color:#5f6b62}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:#fff;padding:11px 12px;outline:none;color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus{border-color:#8ba895;box-shadow:0 0 0 3px #315d4812}
+.result{background:var(--green2);border-radius:16px;padding:17px;margin-top:12px}.result small{color:var(--muted)}.result strong{display:block;font-size:25px;margin-top:3px}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.secondary{background:white;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:10px 15px;font-weight:650}.secondary:hover{border-color:#9db2a1}
+.list{display:grid;gap:9px}.list-row{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:13px;padding:11px 13px}.list-row input[type=checkbox]{accent-color:var(--green);width:17px;height:17px}.list-row span{flex:1}.list-row.done span{text-decoration:line-through;color:#9aa19a}.remove{border:0;background:transparent;color:#a2aaa2;font-size:18px}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}.day{border:1px solid var(--line);border-radius:13px;padding:10px;background:white;min-height:100px}.day b{display:block;font-size:12px;margin-bottom:7px}.day textarea{width:100%;border:0;resize:vertical;min-height:55px;font-size:12px;outline:none;color:var(--ink)}
+footer{border-top:1px solid var(--line);padding:27px 0 40px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:15px}
+.hidden{display:none!important}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#203d2e;color:white;padding:11px 17px;border-radius:99px;font-size:13px;box-shadow:var(--shadow);z-index:10}
+@media(max-width:800px){.hero{grid-template-columns:1fr;gap:28px;padding-top:48px}.hero-art{min-height:280px}.tools{grid-template-columns:repeat(2,1fr)}.nav{gap:13px}.nav a{display:none}.week{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.shell{padding:0 17px}header{height:70px}.hero{padding:42px 0 30px}h1{letter-spacing:-2px}.tools{grid-template-columns:1fr 1fr;gap:9px}.tool-card{padding:15px;min-height:160px}.tool-card h3{font-size:14px}.tool-card p{font-size:12px}.panel{padding:18px;margin-bottom:40px}.grid2{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column;gap:8px}footer{flex-direction:column}.hero-art{min-height:245px}.art-card{width:190px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header>
+  <div class="brand"><span class="brand-mark">✳</span><span>ЛегкоЖить <span style="font-weight:450;color:#89938a">/ EasyLife</span></span></div>
+  <nav class="nav"><a href="#tools" data-i="navTools">Инструменты</a><a href="#guides" data-i="navGuides">Советы</a><a href="#about" data-i="navAbout">О проекте</a><button class="lang" id="langBtn" aria-label="Change language">EN</button></nav>
+</header>
+<main>
+<section class="hero">
+  <div>
+    <div class="eyebrow" data-i="eyebrow">ПРОСТЫЕ ИНСТРУМЕНТЫ НА КАЖДЫЙ ДЕНЬ</div>
+    <h1 data-i="heroTitle">Меньше хлопот.<br>Больше жизни.</h1>
+    <p data-i="heroText">Небольшие помощники для больших повседневных задач. Планируйте бюджет, ставьте цели и наводите порядок — спокойно и просто.</p>
+    <button class="primary" onclick="document.querySelector('#tools').scrollIntoView({behavior:'smooth'})" data-i="heroCta">Выбрать инструмент&nbsp; ↗</button>
+    <div class="hero-note" data-i="heroNote">Бесплатно • Без регистрации • Ваши данные остаются в браузере</div>
+  </div>
+  <div class="hero-art" aria-label="Illustration">
+    <div class="art-sun"></div><div class="art-card"><small data-i="artLabel">ВАША ЦЕЛЬ</small><strong>£1,200</strong><div class="progress"><i></i></div><small data-i="artProgress">72% пути пройдено</small></div>
+    <div class="art-hill"></div><div class="art-hill two"></div>
+  </div>
+</section>
+<section id="tools">
+  <div class="section-head"><div><h2 data-i="toolsTitle">Ваши инструменты</h2><p data-i="toolsSub">Выберите то, что поможет сегодня.</p></div></div>
+  <div class="tools">
+    <button class="tool-card" onclick="openTool('budget')"><div class="tool-icon">◫</div><h3 data-i="budgetTitle">Калькулятор бюджета</h3><p data-i="budgetDesc">Поймите, куда уходят деньги.</p></button>
+    <button class="tool-card" onclick="openTool('savings')"><div class="tool-icon">◎</div><h3 data-i="savingsTitle">План накоплений</h3><p data-i="savingsDesc">Рассчитайте путь к своей цели.</p></button>
+    <button class="tool-card" onclick="openTool('meals')"><div class="tool-icon">♧</div><h3 data-i="mealsTitle">Планировщик питания</h3><p data-i="mealsDesc">Продумайте меню на неделю.</p></button>
+    <button class="tool-card" onclick="openTool('tasks')"><div class="tool-icon">✓</div><h3 data-i="tasksTitle">Список дел</h3><p data-i="tasksDesc">Освободите голову от мелочей.</p></button>
+    <button class="tool-card" onclick="openTool('home')"><div class="tool-icon">⌂</div><h3 data-i="homeTitle">Домашние чек-листы</h3><p data-i="homeDesc">Поддерживайте порядок без стресса.</p></button>
+    <button class="tool-card" onclick="openTool('notes')"><div class="tool-icon">✎</div><h3 data-i="notesTitle">Быстрые заметки</h3><p data-i="notesDesc">Сохраните мысль, пока она рядом.</p></button>
+  </div>
+</section>
+<section id="workspace" class="panel hidden" aria-live="polite">
+  <div class="panel-top"><div><h2 id="panelTitle"></h2><p id="panelDesc"></p></div><button class="close" onclick="closeTool()" aria-label="Close">×</button></div>
+  <div id="panelBody"></div>
+</section>
+
+<section id="guides" style="padding:0 0 54px">
+  <div class="section-head"><div><h2 data-i="guidesTitle">Полезные советы</h2><p data-i="guidesSub">Короткие идеи, которые помогают навести порядок в делах и финансах.</p></div></div>
+  <div class="tools">
+    <article class="tool-card" style="cursor:default">
+      <div class="tool-icon">◫</div><h3 data-i="guide1Title">Как начать вести бюджет</h3>
+      <p data-i="guide1Text">Запишите доходы, разделите расходы на категории и выберите небольшую сумму для накоплений.</p>
+    </article>
+    <article class="tool-card" style="cursor:default">
+      <div class="tool-icon">◎</div><h3 data-i="guide2Title">Как поставить цель накоплений</h3>
+      <p data-i="guide2Text">Определите сумму и срок. Разделите разницу на количество месяцев — так вы получите понятный ориентир.</p>
+    </article>
+    <article class="tool-card" style="cursor:default">
+      <div class="tool-icon">♧</div><h3 data-i="guide3Title">Зачем планировать меню</h3>
+      <p data-i="guide3Text">План на неделю помогает заранее составить список покупок, использовать продукты и сократить импульсивные траты.</p>
+    </article>
+  </div>
+</section>
+
+<section id="about" style="padding:0 0 48px">
+  <div class="section-head"><div><h2 data-i="aboutTitle">Простота — это тоже забота</h2><p data-i="aboutText">EasyLife создан, чтобы помогать вам справляться с повседневными делами без лишней сложности.</p></div></div>
+</section>
+</main>
+<footer><span>© <span id="year"></span> ЛегкоЖить / EasyLife</span><span data-i="footerText">Просто. Полезно. Для вашей повседневной жизни.</span><span><a href="privacy.html" style="color:inherit" data-i="privacyLink">Конфиденциальность</a> · Made with care ✳</span></footer>
+</div>
+<div id="toast" class="toast hidden"></div>
+<script>
+const copy={
+ru:{
+navTools:"Инструменты",navGuides:"Советы",navAbout:"О проекте",eyebrow:"ПРОСТЫЕ ИНСТРУМЕНТЫ НА КАЖДЫЙ ДЕНЬ",heroTitle:"Меньше хлопот.<br>Больше жизни.",heroText:"Небольшие помощники для больших повседневных задач. Планируйте бюджет, ставьте цели и наводите порядок — спокойно и просто.",heroCta:"Выбрать инструмент&nbsp; ↗",heroNote:"Бесплатно • Без регистрации • Ваши данные остаются в браузере",artLabel:"ВАША ЦЕЛЬ",artProgress:"72% пути пройдено",toolsTitle:"Ваши инструменты",toolsSub:"Выберите то, что поможет сегодня.",budgetTitle:"Калькулятор бюджета",budgetDesc:"Поймите, куда уходят деньги.",savingsTitle:"План накоплений",savingsDesc:"Рассчитайте путь к своей цели.",mealsTitle:"Планировщик питания",mealsDesc:"Продумайте меню на неделю.",tasksTitle:"Список дел",tasksDesc:"Освободите голову от мелочей.",homeTitle:"Домашние чек-листы",homeDesc:"Поддерживайте порядок без стресса.",notesTitle:"Быстрые заметки",notesDesc:"Сохраните мысль, пока она рядом.",guidesTitle:"Полезные советы",guidesSub:"Короткие идеи, которые помогают навести порядок в делах и финансах.",guide1Title:"Как начать вести бюджет",guide1Text:"Запишите доходы, разделите расходы на категории и выберите небольшую сумму для накоплений.",guide2Title:"Как поставить цель накоплений",guide2Text:"Определите сумму и срок. Разделите разницу на количество месяцев — так вы получите понятный ориентир.",guide3Title:"Зачем планировать меню",guide3Text:"План на неделю помогает заранее составить список покупок, использовать продукты и сократить импульсивные траты.",aboutTitle:"Простота — это тоже забота",aboutText:"EasyLife создан, чтобы помогать вам справляться с повседневными делами без лишней сложности.",footerText:"Просто. Полезно. Для вашей повседневной жизни.",privacyLink:"Конфиденциальность",
+budgetDesc2:"Введите доход и расходы за месяц.",income:"Доход за месяц",housing:"Жильё",food:"Продукты",transport:"Транспорт",other:"Другие расходы",calculate:"Рассчитать",left:"Остаток после расходов",spent:"Всего расходов",savingsDesc2:"Укажите цель, текущую сумму и ежемесячный взнос.",goal:"Цель накоплений",current:"Уже накоплено",monthly:"Взнос в месяц",months:"Месяцев до цели",weeks:"План на неделю",mealHint:"Запишите идею блюда для каждого дня. План сохраняется автоматически.",dayNames:["Пн","Вт","Ср","Чт","Пт","Сб","Вс"],taskHint:"Добавьте задачу — список сохранится в этом браузере.",addTask:"Добавить задачу",taskPlaceholder:"Например, оплатить счёт",homeHint:"Отмечайте выполненное. Прогресс сохраняется автоматически.",homeItems:["Проветрить комнаты","Протереть поверхности","Постирать вещи","Проверить продукты","Вынести мусор","Полить растения","Подготовить вещи на завтра"],notesHint:"Заметки сохраняются автоматически на этом устройстве.",notePlaceholder:"Напишите что-нибудь важное…",saved:"Сохранено",needValues:"Пожалуйста, проверьте введённые значения.",noIncome:"Введите доход больше нуля.",currency:"Валюта",close:"Закрыть"
+},
+en:{
+navTools:"Tools",navGuides:"Tips",navAbout:"About",eyebrow:"SIMPLE TOOLS FOR EVERYDAY LIFE",heroTitle:"Less hassle.<br>More living.",heroText:"Small helpers for everyday tasks. Plan your budget, set goals and get organised — calmly and simply.",heroCta:"Explore tools&nbsp; ↗",heroNote:"Free to use • No sign-up • Your data stays in your browser",artLabel:"YOUR GOAL",artProgress:"72% of the way there",toolsTitle:"Your everyday tools",toolsSub:"Choose what would help today.",budgetTitle:"Budget calculator",budgetDesc:"See where your money goes.",savingsTitle:"Savings planner",savingsDesc:"Map the path to your goal.",mealsTitle:"Weekly meal planner",mealsDesc:"Plan meals for the week.",tasksTitle:"To-do list",tasksDesc:"Get the little things out of your head.",homeTitle:"Home checklists",homeDesc:"Keep things in order, without the stress.",notesTitle:"Quick notes",notesDesc:"Capture a thought while it is fresh.",guidesTitle:"Practical tips",guidesSub:"Small ideas to bring more clarity to everyday tasks and money.",guide1Title:"How to start a budget",guide1Text:"Write down your income, group expenses into categories and choose a small amount to save.",guide2Title:"How to set a savings goal",guide2Text:"Choose an amount and a target date. Divide the gap by the number of months to get a clear monthly target.",guide3Title:"Why plan your meals",guide3Text:"A weekly plan helps you prepare a shopping list, use what you already have and reduce impulse spending.",aboutTitle:"Simplicity is a form of care",aboutText:"EasyLife helps you handle everyday life without adding unnecessary complexity.",footerText:"Simple. Useful. Made for everyday life.",privacyLink:"Privacy",
+budgetDesc2:"Enter your monthly income and expenses.",income:"Monthly income",housing:"Housing",food:"Groceries",transport:"Transport",other:"Other expenses",calculate:"Calculate",left:"Money left after expenses",spent:"Total expenses",savingsDesc2:"Enter your goal, current savings and monthly contribution.",goal:"Savings goal",current:"Already saved",monthly:"Monthly contribution",months:"Months to reach your goal",weeks:"Your week",mealHint:"Add a meal idea for each day. Your plan saves automatically.",dayNames:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],taskHint:"Add a task — your list is saved in this browser.",addTask:"Add task",taskPlaceholder:"e.g. Pay the bill",homeHint:"Tick items as you go. Your progress saves automatically.",homeItems:["Air out the rooms","Wipe surfaces","Do the laundry","Check groceries","Take out the rubbish","Water the plants","Prepare for tomorrow"],notesHint:"Notes are saved automatically on this device.",notePlaceholder:"Write something important…",saved:"Saved",needValues:"Please check the values you entered.",noIncome:"Enter an income greater than zero.",currency:"Currency",close:"Close"
+}};
+let lang=localStorage.getItem('el_lang')||'en';
+const t=k=>copy[lang][k]??copy.en[k]??k;
+function applyLang(){document.documentElement.lang=lang;document.querySelectorAll('[data-i]').forEach(el=>el.innerHTML=t(el.dataset.i));document.getElementById('langBtn').textContent=lang==='ru'?'EN':'RU';}
+document.getElementById('langBtn').onclick=()=>{lang=lang==='ru'?'en':'ru';localStorage.setItem('el_lang',lang);applyLang();if(!document.getElementById('workspace').classList.contains('hidden')){let id=activeTool;openTool(id)}};
+let activeTool='';
+function openTool(id){activeTool=id;const panel=document.getElementById('workspace'),body=document.getElementById('panelBody');panel.classList.remove('hidden');body.innerHTML='';const titles={budget:'budgetTitle',savings:'savingsTitle',meals:'mealsTitle',tasks:'tasksTitle',home:'homeTitle',notes:'notesTitle'};document.getElementById('panelTitle').textContent=t(titles[id]);document.getElementById('panelDesc').textContent=t(({budget:'budgetDesc2',savings:'savingsDesc2',meals:'mealHint',tasks:'taskHint',home:'homeHint',notes:'notesHint'})[id]);if(id==='budget')renderBudget(body);if(id==='savings')renderSavings(body);if(id==='meals')renderMeals(body);if(id==='tasks')renderTasks(body);if(id==='home')renderHome(body);if(id==='notes')renderNotes(body);panel.scrollIntoView({behavior:'smooth',block:'start'});}
+function closeTool(){document.getElementById('workspace').classList.add('hidden');activeTool=''}
+function field(label,id,type='number',value=''){return `<div class="field"><label for="${id}">${label}</label><input id="${id}" type="${type}" ${type==='number'?'min="0" step="0.01"':''} value="${value}" /></div>`}
+function renderBudget(b){b.innerHTML=`<div class="grid2">${field(t('currency')+' (GBP, EUR, USD…)','currency','text','£')}${field(t('income'),'income')}${field(t('housing'),'housing')}${field(t('food'),'food')}${field(t('transport'),'transport')}${field(t('other'),'other')}</div><button class="primary" id="calc">${t('calculate')}</button><div id="budgetResult"></div>`;document.getElementById('calc').onclick=()=>{let income=+val('income'),spent=['housing','food','transport','other'].reduce((s,k)=>s+(+val(k)||0),0),cur=val('currency')||'£';if(income<=0){toast(t('noIncome'));return}document.getElementById('budgetResult').innerHTML=`<div class="grid2"><div class="result"><small>${t('left')}</small><strong>${cur}${(income-spent).toFixed(2)}</strong></div><div class="result"><small>${t('spent')}</small><strong>${cur}${spent.toFixed(2)}</strong></div></div>`;};}
+function renderSavings(b){b.innerHTML=`<div class="grid2">${field(t('currency')+' (GBP, EUR, USD…)','scurrency','text','£')}${field(t('goal'),'goalv')}${field(t('current'),'currentv','number','0')}${field(t('monthly'),'monthlyv')}</div><button class="primary" id="scalc">${t('calculate')}</button><div id="sresult"></div>`;document.getElementById('scalc').onclick=()=>{let goal=+val('goalv'),cur=+val('currentv'),m=+val('monthlyv'),symbol=val('scurrency')||'£';if(goal<=cur||m<=0){toast(t('needValues'));return}let n=Math.ceil((goal-cur)/m);document.getElementById('sresult').innerHTML=`<div class="result"><small>${t('months')}</small><strong>${n} ${lang==='ru'?'мес.':'months'}</strong><small>${symbol}${(goal-cur).toFixed(2)} ${lang==='ru'?'осталось накопить':'left to save'}</small></div>`;};}
+function val(id){return document.getElementById(id)?.value??''}
+function store(key,value){localStorage.setItem('el_'+key,JSON.stringify(value));toast(t('saved'))}
+function load(key,fallback){try{return JSON.parse(localStorage.getItem('el_'+key))??fallback}catch{return fallback}}
+function renderMeals(b){let days=t('dayNames');let values=load('meals',Array(7).fill(''));b.innerHTML=`<div class="week">${days.map((d,i)=>`<div class="day"><b>${d}</b><textarea aria-label="${d}" data-day="${i}" placeholder="…">${escapeHtml(values[i]||'')}</textarea></div>`).join('')}</div>`;b.querySelectorAll('textarea').forEach(el=>el.oninput=()=>{let arr=Array.from(b.querySelectorAll('textarea')).map(x=>x.value);localStorage.setItem('el_meals',JSON.stringify(arr));});}
+function renderTasks(b){let tasks=load('tasks',[]);b.innerHTML=`<div class="grid2"><div class="field"><label>${t('addTask')}</label><input id="newTask" placeholder="${t('taskPlaceholder')}"></div><div style="display:flex;align-items:end;padding-bottom:13px"><button class="primary" id="addTask">${t('addTask')} +</button></div></div><div class="list" id="taskList"></div>`;const draw=()=>{document.getElementById('taskList').innerHTML=tasks.map((x,i)=>`<div class="list-row ${x.done?'done':''}"><input type="checkbox" data-check="${i}" ${x.done?'checked':''}><span>${escapeHtml(x.text)}</span><button class="remove" data-remove="${i}" aria-label="Remove">×</button></div>`).join('')||`<small style="color:var(--muted)">—</small>`;b.querySelectorAll('[data-check]').forEach(el=>el.onchange=()=>{tasks[+el.dataset.check].done=el.checked;store('tasks',tasks);draw()});b.querySelectorAll('[data-remove]').forEach(el=>el.onclick=()=>{tasks.splice(+el.dataset.remove,1);store('tasks',tasks);draw()})};document.getElementById('addTask').onclick=()=>{let v=val('newTask').trim();if(!v)return;tasks.push({text:v,done:false});store('tasks',tasks);document.getElementById('newTask').value='';draw()};draw();}
+function renderHome(b){let items=t('homeItems'),checks=load('homechecks',{});b.innerHTML=`<div class="list">${items.map((x,i)=>`<label class="list-row ${checks[i]?'done':''}"><input type="checkbox" data-home="${i}" ${checks[i]?'checked':''}><span>${x}</span></label>`).join('')}</div><div class="actions"><button class="secondary" id="resetHome">${lang==='ru'?'Сбросить отметки':'Reset checklist'}</button></div>`;b.querySelectorAll('[data-home]').forEach(el=>el.onchange=()=>{checks[el.dataset.home]=el.checked;localStorage.setItem('el_homechecks',JSON.stringify(checks));el.parentElement.classList.toggle('done',el.checked)});document.getElementById('resetHome').onclick=()=>{localStorage.removeItem('el_homechecks');renderHome(b)};}
+function renderNotes(b){b.innerHTML=`<div class="field"><textarea id="notesArea" rows="7" placeholder="${t('notePlaceholder')}">${escapeHtml(load('notes',''))}</textarea></div>`;document.getElementById('notesArea').oninput=e=>localStorage.setItem('el_notes',JSON.stringify(e.target.value));}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+let toastTimer;function toast(msg){let el=document.getElementById('toast');el.textContent=msg;el.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.add('hidden'),1500)}
+document.getElementById('year').textContent=new Date().getFullYear();applyLang();
+</script>
+</body>
+</html>
